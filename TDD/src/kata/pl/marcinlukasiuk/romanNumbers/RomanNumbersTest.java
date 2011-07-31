@@ -35,7 +35,7 @@ public class RomanNumbersTest {
 	
 	
 	@Test
-	public void shouldThrowIllegalArgumentExceptionWhenGivenInvalidSymbol() throws Exception {
+	public void shouldThrowIllegalArgumentExceptionWhenGivenInvalidRomanSymbol() throws Exception {
 
 		//given
 		String invalidRomanNumber = "MDCU";

@@ -29,7 +29,7 @@ public class GameBoard {
 		return board[x][y];
 	}
 	
-	public Cell getNeighbourCell(NeighourDirection direction, int x, int y) {
+	public Cell getNeighbourCell(NeighbourDirection direction, int x, int y) {
 		return getCell(x + direction.getVerticalOffset(), y + direction.getHorizontalOffset());
 	}
 	
@@ -37,8 +37,8 @@ public class GameBoard {
 		
 		int neighBours = 0;
 		
-		for (int i = 0; i < NeighourDirection.values().length; i++) {
-			if (hasNeighbour(NeighourDirection.values()[i], x, y)) {
+		for (int i = 0; i < NeighbourDirection.values().length; i++) {
+			if (hasNeighbour(NeighbourDirection.values()[i], x, y)) {
 				neighBours ++;
 			}
 		}
@@ -46,7 +46,7 @@ public class GameBoard {
 		return neighBours;
 	}
 
-	private boolean hasNeighbour(NeighourDirection direction, int x, int y) {
+	private boolean hasNeighbour(NeighbourDirection direction, int x, int y) {
 		return getNeighbourCell(direction, x, y).isAlive();
 	}
 

@@ -77,7 +77,7 @@ public class GameBoardTest {
 		Cell expected = gameBoard.getBoard()[x][y-1];
 		
 		//when
-		Cell result = gameBoard.getNeighbourCell(NeighourDirection.LEFT, x, y);
+		Cell result = gameBoard.getNeighbourCell(NeighbourDirection.LEFT, x, y);
 		//then
 		assertThat(result).isSameAs(expected);
 	}
@@ -119,7 +119,7 @@ public class GameBoardTest {
 	public void shouldCellHaveOneNeighbourOnTheRight() throws Exception {
 
 		//given
-		bornNeighbourCell(NeighourDirection.RIGHT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.RIGHT, x, y, gameBoard);
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -132,7 +132,7 @@ public class GameBoardTest {
 	public void shouldCellHaveOneNeighbourOnTheLeft() throws Exception {
 
 		//given
-		bornNeighbourCell(NeighourDirection.LEFT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.LEFT, x, y, gameBoard);
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -145,8 +145,8 @@ public class GameBoardTest {
 	public void shouldCellHaveTwoNeighboursVertically() throws Exception {
 
 		//given
-		bornNeighbourCell(NeighourDirection.LEFT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.RIGHT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.LEFT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.RIGHT, x, y, gameBoard);
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -159,7 +159,7 @@ public class GameBoardTest {
 	public void shouldCellHaveOneNeighbourOnTop() throws Exception {
 
 		//given
-		bornNeighbourCell(NeighourDirection.TOP, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.TOP, x, y, gameBoard);
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -171,7 +171,7 @@ public class GameBoardTest {
 	@Test
 	public void shouldCellHaveOneNeighbourOnBottom() throws Exception {
 
-		bornNeighbourCell(NeighourDirection.BOTTOM, x, y, gameBoard);	
+		bornNeighbourCell(NeighbourDirection.BOTTOM, x, y, gameBoard);	
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -184,10 +184,10 @@ public class GameBoardTest {
 	public void shouldCellHaveFourNeighboursHorizontallyAndVertically() throws Exception {
 
 		//given	
-		bornNeighbourCell(NeighourDirection.LEFT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.RIGHT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.TOP, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.BOTTOM, x, y, gameBoard);	
+		bornNeighbourCell(NeighbourDirection.LEFT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.RIGHT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.TOP, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.BOTTOM, x, y, gameBoard);	
 		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
@@ -199,10 +199,10 @@ public class GameBoardTest {
 	public void shouldCellHaveFourNeighboursDiagonally() throws Exception {
 
 		//given
-		bornNeighbourCell(NeighourDirection.TOP_LEFT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.TOP_RIGHT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.BOTTOM_LEFT, x, y, gameBoard);
-		bornNeighbourCell(NeighourDirection.BOTTOM_RIGHT, x, y, gameBoard);		
+		bornNeighbourCell(NeighbourDirection.TOP_LEFT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.TOP_RIGHT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.BOTTOM_LEFT, x, y, gameBoard);
+		bornNeighbourCell(NeighbourDirection.BOTTOM_RIGHT, x, y, gameBoard);		
 		//when
 		int result = gameBoard.numberOfNeighbours(x, y);
 		//then
@@ -210,7 +210,7 @@ public class GameBoardTest {
 	}
 
 
-	private void bornNeighbourCell(NeighourDirection direction, int x, int y, GameBoard gameBoard) {
+	private void bornNeighbourCell(NeighbourDirection direction, int x, int y, GameBoard gameBoard) {
 		gameBoard.getNeighbourCell(direction, x, y).born();
 	}
 

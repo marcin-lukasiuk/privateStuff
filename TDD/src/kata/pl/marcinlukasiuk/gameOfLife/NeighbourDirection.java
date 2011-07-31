@@ -5,7 +5,7 @@ package pl.marcinlukasiuk.gameOfLife;
  * 
  * @author marcin
  */
-public enum NeighourDirection {
+public enum NeighbourDirection {
 	
 	LEFT         ( 0, -1),
 	RIGHT        ( 0,  1),
@@ -16,7 +16,7 @@ public enum NeighourDirection {
 	BOTTOM_LEFT  ( 1, -1),
 	BOTTOM_RIGHT ( 1,  1);
 	
-	private NeighourDirection(int verticalOffset, int horizontalOffset) {
+	private NeighbourDirection(int verticalOffset, int horizontalOffset) {
 		this.verticalOffset = verticalOffset;
 		this.horizontalOffset = horizontalOffset;
 	}
