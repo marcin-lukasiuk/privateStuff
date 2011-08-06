@@ -50,4 +50,39 @@ public class RomanNumbers {
 		return romanSymbols;
 	}
 
+	/**
+	 * Despite the lack of standardization, modern textbooks and references often state additional rules, including the following:
+     * The symbols "I", "X", "C", and "M" can be repeated three times in succession, but no more. "D", "L", and "V" can never be repeated.
+     * "I" can be subtracted from "V" and "X" only. "X" can be subtracted from "L" and "C" only. 
+     * "C" can be subtracted from "D" and "M" only. "V", "L", and "D" can never be subtracted
+     * Only one small-value symbol may be subtracted from any large-value symbol.
+	 */
+	public static String intToRoman(int number) {
+		
+		String romanNumber = "";
+		RomanSymbol[] symbols = RomanSymbol.valuesDesc();
+		
+		while (number != 0) {
+			for (int i = 0; i < symbols.length; i++) {
+				
+				RomanSymbol symbol = symbols[i];
+				if (number >= symbol.getIntValue()) {
+					romanNumber += symbol.name();
+					number -= symbol.getIntValue();
+					break;
+				}
+				else if(substractionPossible(number, symbol)) {
+					romanNumber += symbol.getCanBeSubstracted().name() + symbol.name();
+					number -= (symbol.getIntValue() - symbol.getCanBeSubstracted().getIntValue());
+					break;
+				}
+			}
+		}
+		
+		return romanNumber;
+	}
+
+	private static boolean substractionPossible(int number, RomanSymbol symbol) {
+		return number >= symbol.getIntValue() - symbol.getCanBeSubstracted().getIntValue();
+	}
 }

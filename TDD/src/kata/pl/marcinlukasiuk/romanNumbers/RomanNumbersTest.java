@@ -48,6 +48,23 @@ public class RomanNumbersTest {
 		} catch (Exception e) {
 			assertThat(e).isInstanceOf(IllegalArgumentException.class);
 		}
+	}
+	
+	
+	@Test
+	public void shouldConvertIntsToRomunNumber() throws Exception {
 
+		assertThat(RomanNumbers.intToRoman(1)).isEqualTo("I");
+		assertThat(RomanNumbers.intToRoman(2)).isEqualTo("II");
+		assertThat(RomanNumbers.intToRoman(3)).isEqualTo("III");
+		assertThat(RomanNumbers.intToRoman(5)).isEqualTo("V");
+		assertThat(RomanNumbers.intToRoman(7)).isEqualTo("VII");
+		assertThat(RomanNumbers.intToRoman(10)).isEqualTo("X");
+		assertThat(RomanNumbers.intToRoman(18)).isEqualTo("XVIII");
+		assertThat(RomanNumbers.intToRoman(4)).isEqualTo("IV");
+		assertThat(RomanNumbers.intToRoman(9)).isEqualTo("IX");
+		assertThat(RomanNumbers.intToRoman(19)).isEqualTo("XIX");
+		assertThat(RomanNumbers.intToRoman(1944)).isEqualTo("MCMXLIV");
+		assertThat(RomanNumbers.intToRoman(1604)).isEqualTo("MDCIV");
 	}
 }
