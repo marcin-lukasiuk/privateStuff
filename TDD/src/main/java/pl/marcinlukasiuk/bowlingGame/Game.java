@@ -1,15 +1,4 @@
 package pl.marcinlukasiuk.bowlingGame;
-/* 
- * Created on 16:24:22 by mlukasiu
- * 
- * Copyright (c) 2001-2010 Contium S.A.
- * ul. Przedmiejska 6-10, 54-201 Wrocław, Poland
- * Wszelkie prawa zastrzeżone
- *
- * Niniejsze oprogramowanie jest własnością Contium S.A.
- * Wykorzystanie niniejszego oprogramowania jest możliwe tylko na podstawie 
- * i w zgodzie z warunkami umowy licencyjnej zawartej z Contium S.A. 
- */
 
 public class Game {
 
