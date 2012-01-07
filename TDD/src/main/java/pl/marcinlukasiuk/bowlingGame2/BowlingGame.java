@@ -1,4 +1,4 @@
-package pl.marcinlukasiuk.bowlingGame;
+package pl.marcinlukasiuk.bowlingGame2;
 
 public class BowlingGame {
 

@@ -1,8 +1,10 @@
-package pl.marcinlukasiuk.math;
+package pl.marcinlukasiuk.calculator;
 
 import static org.fest.assertions.Assertions.assertThat;
 
 import org.junit.Test;
+
+import pl.marcinlukasiuk.calculator.Calculator;
 
 
 public class CalculatorTest {

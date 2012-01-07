@@ -1,9 +1,11 @@
-package pl.marcinlukasiuk.bowlingGame;
+package pl.marcinlukasiuk.bowlingGame2;
 
 import static org.fest.assertions.Assertions.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import pl.marcinlukasiuk.bowlingGame2.BowlingGame;
 
 
 public class BowlingGameTest {

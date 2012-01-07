@@ -1,4 +1,4 @@
-package pl.marcinlukasiuk.math;
+package pl.marcinlukasiuk.calculator;
 
 public enum Operator {
 

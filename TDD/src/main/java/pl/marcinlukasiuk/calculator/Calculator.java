@@ -1,4 +1,4 @@
-package pl.marcinlukasiuk.math;
+package pl.marcinlukasiuk.calculator;
 
 import java.util.Stack;
 
